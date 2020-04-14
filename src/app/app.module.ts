@@ -23,12 +23,13 @@ export const ROUTES: Routes = [];
 export class AppModule {}
 
 /*
-var config = {
-  apiKey: "AIzaSyCXz7GrHLBs-xlsCrr185iG4v4UrNreq2Y",
-  authDomain: "fitness-app-e668a.firebaseapp.com",
-  databaseURL: "https://fitness-app-e668a.firebaseio.com",
-  projectId: "fitness-app-e668a",
-  storageBucket: "fitness-app-e668a.appspot.com",
-  messagingSenderId: "1014564696462"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyACMXswVAD2y8ENOHtoOjcSqr-udoZuzHk",
+    authDomain: "fitness-app-8effb.firebaseapp.com",
+    databaseURL: "https://fitness-app-8effb.firebaseio.com",
+    projectId: "fitness-app-8effb",
+    storageBucket: "fitness-app-8effb.appspot.com",
+    messagingSenderId: "603010472530",
+    appId: "1:603010472530:web:cbb4b73699107966da1d8b"
+  };
 */
