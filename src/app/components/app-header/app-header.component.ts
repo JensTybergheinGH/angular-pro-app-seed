@@ -26,7 +26,7 @@ export class AppHeaderComponent {
   user: User;
 
   @Output()
-  logout = new EventEmitter<Any>();
+  logout = new EventEmitter();
 
   logoutUser() {
     this.logout.emit();
