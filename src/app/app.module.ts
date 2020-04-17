@@ -14,21 +14,26 @@ import { AppComponent } from "./containers/app/app.component";
 import { AppHeaderComponent } from "./components/app-header/app-header.component";
 import { AppNavComponent } from "./components/app-nav/app-nav.component";
 
+import { HealthModule } from "../health/health.module";
+
 // routes
-export const ROUTES: Routes = [];
+export const ROUTES: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'schedule' }
+];
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    AuthModule
+    AuthModule,
+    HealthModule,
   ],
   // Hier komen je componenten
   //De selector in een component is hoe je hem op page moet zetten
   declarations: [
     AppComponent,
     AppHeaderComponent,
-    AppNavComponent
+    AppNavComponent,
   ],
   providers: [Store],
   bootstrap: [AppComponent],
