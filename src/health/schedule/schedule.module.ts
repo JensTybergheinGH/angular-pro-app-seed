@@ -3,10 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+// Shared module voor de pipes
+import { SharedModule } from '../shared/shared.module';
+
 // Components
 import { ScheduleCalendarComponent } from './components/schedule-calendar/schedule-calendar.component';
 import { ScheduleDaysComponent } from './components/schedule-days/schedule-days.component';
 import { ScheduleControlsComponent } from './components/schedule-controls/schedule-controls.component';
+import { ScheduleSectionComponent } from './components/schedule-section/schedule-section.component';
+import { ScheduleAssignComponent } from './components/schedule-assign/schedule-assign.component';
 
 
 // Containers
@@ -20,13 +25,16 @@ export const ROUTES: Routes = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild(ROUTES)
+    RouterModule.forChild(ROUTES),
+    SharedModule
   ],
   declarations: [
     ScheduleComponent,
     ScheduleCalendarComponent,
     ScheduleDaysComponent,
-    ScheduleControlsComponent
+    ScheduleControlsComponent,
+    ScheduleSectionComponent,
+    ScheduleAssignComponent
   ]
 })
 export class ScheduleModule { }
