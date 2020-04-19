@@ -10,7 +10,12 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 
 // Services
 import { MealsService } from './services/meals/meals.service';
+import { WorkoutsService } from './services/workouts/workouts.service';
+import { ScheduleService } from './services/schedule/schedule.service';
 
+// Pipes
+import { JoinPipe } from './pipes/join.pipe';
+import { WorkoutPipe } from './pipes/workout.pipe';
 
 // Export zodat we het kunnen gebruiken buiten de shared module
 @NgModule({
@@ -20,10 +25,14 @@ import { MealsService } from './services/meals/meals.service';
     AngularFireDatabaseModule
   ],
   declarations: [
-    ListItemComponent
+    ListItemComponent,
+    JoinPipe,
+    WorkoutPipe
   ],
   exports: [
-    ListItemComponent
+    ListItemComponent,
+    JoinPipe,
+    WorkoutPipe
   ]
 })
 export class SharedModule {
@@ -31,7 +40,9 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
-        MealsService
+        MealsService,
+        WorkoutsService,
+        ScheduleService
       ]
     }
   }

@@ -29,7 +29,7 @@ import { MealsService, Meal } from './../../../shared/services/meals/meals.servi
         <div *ngIf="meals$ | async as meals; else loading;">
           <div class="message" *ngIf="!meals.length">
             <img src="/img/face.svg">
-            No meals, add a nem meal to start
+            No meals, add a new meal to start
           </div>
 
           <list-item
